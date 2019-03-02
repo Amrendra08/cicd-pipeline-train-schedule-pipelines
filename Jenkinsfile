@@ -4,8 +4,7 @@ pipeline{
     stage('Build'){
       echo "Build Started"
       sh './gradlew build'
-      archiveArtifacts 'dist/trainSchedule.zip'
-
+      archiveArtifacts artifacts: 'dist/trainSchedule.zip'
     }
   }
 }
